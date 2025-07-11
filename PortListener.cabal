@@ -1,0 +1,24 @@
+cabal-version:   3.12
+name:            PortListener
+version:         0.1.0.0
+license:         NONE
+author:          Christopher Weaver
+maintainer:      crweaver225@yahoo.com
+build-type:      Simple
+extra-doc-files: README.md
+
+common warnings
+    ghc-options: -Wall
+
+executable PortListener
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:  base >=4.16 && <5,
+                    scotty,
+                    containers,
+                    stm,
+                    text,
+                    bytestring
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
